@@ -10,7 +10,7 @@ import UIKit
 class NewViewController: UIViewController {
     
     
-    var counter = 1
+    var counter = 1.0
     var theTimer:Timer!
     
     
@@ -18,23 +18,36 @@ class NewViewController: UIViewController {
         super.loadView()
         print("New Page")
         
-        let view1 = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        view1.backgroundColor = UIColor.red
-        self.view.addSubview(view1)
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let view1 = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        view1.backgroundColor = UIColor.red
+        self.view.addSubview(view1)
         
-        theTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(setCounter), userInfo: nil, repeats: true)
+        theTimer = Timer.scheduledTimer(withTimeInterval: 0.04, repeats: true, block: { timer in
+            self.setCounter(sender: view1)
+        })
+        
+//        theTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(setCounter), userInfo: nil, repeats: true)
 
 
     }
     
-    @objc func setCounter(){
-        counter += 1
+    func setCounter(sender:UIView){
+        
+        let angel = counter * Double.pi / 180
+        sender.transform = CGAffineTransform(rotationAngle: angel)
+        self.counter += 4
         print(counter)
     }
+    
+//    @objc func setCounter(){
+//        counter += 1
+//        print(counter)
+//    }
     
     
     
