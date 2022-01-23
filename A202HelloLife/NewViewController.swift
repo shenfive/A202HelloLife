@@ -11,6 +11,7 @@ class NewViewController: UIViewController {
     
     
     var counter = 1.0
+    var offset = 1.0
     var theTimer:Timer!
     @IBOutlet weak var theSegment: UISegmentedControl!
     
@@ -47,9 +48,9 @@ class NewViewController: UIViewController {
         sender.transform = CGAffineTransform(rotationAngle: angel)
         
         if theSegment.selectedSegmentIndex == 0 {
-            self.counter += 1
+            self.counter += offset
         }else{
-            self.counter -= 1
+            self.counter -= offset
         }
         
         
@@ -64,9 +65,10 @@ class NewViewController: UIViewController {
         theTimer = nil
     }
     
-    @IBAction func sliderAction(_ sender: UISlider) {
-        print(sender.value)
+
+    @IBAction func segmentAction(_ sender: UISlider) {
+        print("\(sender.value)")
+        offset = Double(sender.value)
     }
     
-
 }

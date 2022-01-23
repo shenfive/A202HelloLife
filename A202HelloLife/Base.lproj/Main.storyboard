@@ -54,14 +54,14 @@
                                     <segment title="反轉"/>
                                 </segments>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-oH-4tW">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-oH-4tW">
                                 <rect key="frame" x="105" y="219" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9gm-ek-HNf"/>
                                     <constraint firstAttribute="height" constant="29" id="sNy-t8-rKc"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="sliderAction:" destination="JAu-uV-V37" eventType="valueChanged" id="UDT-Vp-Gpa"/>
+                                    <action selector="segmentAction:" destination="JAu-uV-V37" eventType="valueChanged" id="5VI-vb-AQh"/>
                                 </connections>
                             </slider>
                         </subviews>
