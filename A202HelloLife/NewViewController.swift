@@ -28,6 +28,8 @@ class NewViewController: UIViewController {
         view1.backgroundColor = UIColor.red
         
         view1.center = self.view.center
+        view1.layer.cornerRadius = 15
+        view1.clipsToBounds = true
         
         
         self.view.addSubview(view1)
@@ -51,7 +53,7 @@ class NewViewController: UIViewController {
         }
         
         
-        print("\(counter):\(theSegment.selectedSegmentIndex)")
+//        print("\(counter):\(theSegment.selectedSegmentIndex)")
     }
     
     
@@ -62,6 +64,9 @@ class NewViewController: UIViewController {
         theTimer = nil
     }
     
+    @IBAction func sliderAction(_ sender: UISlider) {
+        print(sender.value)
+    }
     
 
 }

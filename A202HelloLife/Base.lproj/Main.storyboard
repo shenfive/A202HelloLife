@@ -54,12 +54,24 @@
                                     <segment title="反轉"/>
                                 </segments>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-oH-4tW">
+                                <rect key="frame" x="105" y="219" width="204" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9gm-ek-HNf"/>
+                                    <constraint firstAttribute="height" constant="29" id="sNy-t8-rKc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="JAu-uV-V37" eventType="valueChanged" id="UDT-Vp-Gpa"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iVq-we-CY0"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="BlC-20-uBW" firstAttribute="centerX" secondItem="nI2-Ol-mxD" secondAttribute="centerX" id="Boa-Dq-efc"/>
                             <constraint firstItem="BlC-20-uBW" firstAttribute="top" secondItem="iVq-we-CY0" secondAttribute="top" constant="60" id="I7d-pD-iWB"/>
+                            <constraint firstItem="AMF-oH-4tW" firstAttribute="centerX" secondItem="nI2-Ol-mxD" secondAttribute="centerX" id="OKT-PY-tle"/>
+                            <constraint firstItem="AMF-oH-4tW" firstAttribute="top" secondItem="BlC-20-uBW" secondAttribute="bottom" constant="40" id="p8i-bL-xLo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vDl-XG-ADg"/>
@@ -69,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDx-7B-1xN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877" y="45"/>
+            <point key="canvasLocation" x="1876.8115942028987" y="44.866071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VJ4-c3-DAg">
