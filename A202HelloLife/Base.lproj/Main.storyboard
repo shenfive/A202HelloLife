@@ -43,10 +43,29 @@
                     <view key="view" contentMode="scaleToFill" id="nI2-Ol-mxD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BlC-20-uBW">
+                                <rect key="frame" x="107" y="148" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="uTb-br-46j"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="正轉"/>
+                                    <segment title="反轉"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iVq-we-CY0"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="BlC-20-uBW" firstAttribute="centerX" secondItem="nI2-Ol-mxD" secondAttribute="centerX" id="Boa-Dq-efc"/>
+                            <constraint firstItem="BlC-20-uBW" firstAttribute="top" secondItem="iVq-we-CY0" secondAttribute="top" constant="60" id="I7d-pD-iWB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vDl-XG-ADg"/>
+                    <connections>
+                        <outlet property="theSegment" destination="BlC-20-uBW" id="QZc-as-dBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDx-7B-1xN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

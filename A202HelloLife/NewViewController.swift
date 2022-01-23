@@ -12,6 +12,7 @@ class NewViewController: UIViewController {
     
     var counter = 1.0
     var theTimer:Timer!
+    @IBOutlet weak var theSegment: UISegmentedControl!
     
     
     override func loadView() {
@@ -25,13 +26,15 @@ class NewViewController: UIViewController {
         super.viewDidLoad()
         let view1 = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
         view1.backgroundColor = UIColor.red
+        
+        view1.center = self.view.center
+        
+        
         self.view.addSubview(view1)
         
-        theTimer = Timer.scheduledTimer(withTimeInterval: 0.04, repeats: true, block: { timer in
+        theTimer = Timer.scheduledTimer(withTimeInterval: (1/60.0), repeats: true, block: { timer in
             self.setCounter(sender: view1)
         })
-        
-//        theTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(setCounter), userInfo: nil, repeats: true)
 
 
     }
@@ -40,27 +43,17 @@ class NewViewController: UIViewController {
         
         let angel = counter * Double.pi / 180
         sender.transform = CGAffineTransform(rotationAngle: angel)
-        self.counter += 4
-        print(counter)
+        
+        if theSegment.selectedSegmentIndex == 0 {
+            self.counter += 1
+        }else{
+            self.counter -= 1
+        }
+        
+        
+        print("\(counter):\(theSegment.selectedSegmentIndex)")
     }
     
-//    @objc func setCounter(){
-//        counter += 1
-//        print(counter)
-//    }
-    
-    
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let view2 = UIView(frame: CGRect(x: 100, y: 250, width: 100, height: 100))
-        view2.backgroundColor = UIColor.blue
-        self.view.addSubview(view2)
-        
-        
-    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
