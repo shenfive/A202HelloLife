@@ -13,6 +13,7 @@
 		BA3E8BB6279CEDDD00C5123B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3E8BB4279CEDDD00C5123B /* Main.storyboard */; };
 		BA3E8BB8279CEDDE00C5123B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3E8BB7279CEDDE00C5123B /* Assets.xcassets */; };
 		BA3E8BBB279CEDDE00C5123B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3E8BB9279CEDDE00C5123B /* LaunchScreen.storyboard */; };
+		BA3E8BC3279CEF2B00C5123B /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3E8BC2279CEF2B00C5123B /* NewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BA3E8BB7279CEDDE00C5123B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3E8BBA279CEDDE00C5123B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3E8BBC279CEDDE00C5123B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3E8BC2279CEF2B00C5123B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BA3E8BB7279CEDDE00C5123B /* Assets.xcassets */,
 				BA3E8BB9279CEDDE00C5123B /* LaunchScreen.storyboard */,
 				BA3E8BBC279CEDDE00C5123B /* Info.plist */,
+				BA3E8BC2279CEF2B00C5123B /* NewViewController.swift */,
 			);
 			path = A202HelloLife;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				BA3E8BB3279CEDDD00C5123B /* ViewController.swift in Sources */,
 				BA3E8BAF279CEDDD00C5123B /* AppDelegate.swift in Sources */,
 				BA3E8BB1279CEDDD00C5123B /* SceneDelegate.swift in Sources */,
+				BA3E8BC3279CEF2B00C5123B /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
